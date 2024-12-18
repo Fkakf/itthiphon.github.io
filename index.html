@@ -8,79 +8,114 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f9f9f9;
             color: #333;
-            margin: 0;
-            padding: 0;
+            margin: 100px;
+            padding: 150px;
         }
         header {
-            background-color: #7e0909; /* สีแดง */
+            background-color: #7e0909;
             color: white;
             text-align: center;
-            padding: 30px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 100px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            font-size: 36px;
+            font-size: 40px;
             margin: 0;
         }
         .container {
-            width: 85%;
-            margin: 20px auto;
-            padding: 20px;
+            width: 80%;
+            margin: 40px auto;
+            padding: 30px;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         .profile {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            margin-bottom: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
         }
         .profile img {
             border-radius: 50%;
-            width: 180px;
-            height: 180px;
+            width: 300px;
+            height: 300px;
             object-fit: cover;
-            border: 5px solid #7e0909;
+            border: 6px solid #ffffff;
         }
         .profile-info {
             flex: 1;
             padding-left: 20px;
+            margin-top: 20px;
+            text-align: left;
         }
         .profile-info h2 {
-            margin: 0;
             color: #7e0909;
-            font-size: 28px;
+            font-size: 32px;
+            margin-bottom: 10px;
         }
         .profile-info p {
             font-size: 18px;
-            color: #555;
+            color: #636363;
             margin: 8px 0;
         }
         .contact-info {
-            background-color: #333; /* สีดำ */
+            background-color: #000000; /* สีดำ */
             color: white;
             padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
         }
         .contact-info h3 {
             margin-top: 0;
         }
         .contact-info p {
             font-size: 16px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
+
+        /* CSS สำหรับ Progress Bar */
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            width: 100%;
+            height: 20px;
+            margin: 10px 0;
+        }
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .progress-bar .it-subport {
+            background-color: #7e0909;
+            width: 90%;
+        }
+        .progress-bar .network {
+            background-color: #7e0909;
+            width: 80%;
+        }
+        .progress-bar .website {
+            background-color: #7e0909;
+            width: 70%;
+        }
+        .progress-bar .graphic {
+            background-color: #7e0909;
+            width: 65%;
+        }
+
         .social-icons {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center; /* ใช้ flexbox เพื่อให้ไอคอนอยู่ตรงกลาง */
             gap: 20px;
             margin-top: 15px;
         }
         .social-icons a {
-            font-size: 25px;
+            font-size: 30px;
             color: white;
             text-decoration: none;
         }
@@ -91,23 +126,74 @@
             background-color: #7e0909;
             color: white;
             text-align: center;
-            padding: 15px 0;
+            padding: 30px 0;
             margin-top: 40px;
+            font-size: 18px;
         }
+        footer p {
+            margin: 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #ff5a5f;
+        }
+
+        /* เพิ่ม CSS สำหรับเมนูย่อย */
+        .menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #7e0909;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .menu-items {
+            display: none;
+            position: absolute;
+            top: 35px;
+            right: 0;
+            background-color: #7e0909;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-items a {
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .menu-items a:hover {
+            background-color: #ff5a5f;
+        }
+
+        .menu:hover .menu-items {
+            display: block;
+        }
+
     </style>
 </head>
 <body>
 
 <header>
-    <h1>แนะนำตัว - IT.5101</h1>
+    <h1>แนะนำตัว</h1>
 </header>
+
 
 <div class="container">
     <section class="profile">
         <img src="img/profile.jpg" alt="รูปของคุณ"> <!-- ใส่รูปของคุณที่นี่ -->
         <div class="profile-info">
             <h2>ชื่อ อิทธิพล ใจบุญ (เจ๋ง)</h2>
-            <p>อายุ 20ปี</p>
+            <p>อายุ: 20 ปี</p>
             <p>รหัสนักศึกษา: 66309010015</p>
             <p>หมายเลขโทรศัพท์: 0621723645</p>
             <p>ห้อง: IT.5101</p>
@@ -115,19 +201,43 @@
     </section>
 
     <section class="contact-info">
-        <h3>ข้อมูลติดต่อ</h3>
-        <p>หากคุณต้องการติดต่อฉัน สามารถติดต่อผ่านช่องทางต่าง ๆ ดังนี้:</p>
-        <p>Email: <a href="mailto:itp1415@gmail.com" style="color: #fff; text-decoration: none;">itp1415@gmail.com</a></p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/xiththiphl.c.buy/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://line.me/ti/p/~itthiphon" target="_blank" title="Line"><i class="fab fa-line"></i></a>
-            <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <h3>ประวัติการศึกษา</h3>
+        <p>ระดับชั้นประถมศึกษา ปีที่ 1-4 ศึกษาที่ โรงเรียนบ้านทุ้งเจ้า จ.เชียงราย</p>
+        <p>ระดับชั้นประถมศึกษาปีที่ 5-มัธยมศึกษาปีที่ 3 ศึกษาที่ โรงเรียนบ้านสันป่าสัก จ.เชียงใหม่</p>
+        <p>ระดับชั้น ปวช.1 - ปวส.2 ศึกษาที่ วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</p>
+    </section>
+
+    <section class="contact-info">
+        <h3>ความสามารถ</h3>
+        <p>IT Subport </p>
+        <div class="progress-bar">
+            <span class="it-subport"></span>
+        </div>
+        <p>Network </p>
+        <div class="progress-bar">
+            <span class="network"></span>
+        </div>
+        <p>Website </p>
+        <div class="progress-bar">
+            <span class="website"></span>
+        </div>
+        <p>Graphic </p>
+        <div class="progress-bar">
+            <span class="graphic"></span>
         </div>
     </section>
 </div>
 
 <footer>
-    <p>© 2024 IT.5101 - อิทธิพล ใจบุญ</p>
+    <h3>ข้อมูลติดต่อ</h3>
+    <p>หากคุณต้องการติดต่อฉัน สามารถติดต่อผ่านช่องทางต่าง ๆ ดังนี้:</p>
+    <p>Email: <a href="mailto:itp1415@gmail.com">itp1415@gmail.com</a></p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/xiththiphl.c.buy/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://line.me/ti/p/~itthiphon" target="_blank" title="Line"><i class="fab fa-line"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>© 2024 อิทธิพล ใจบุญ - </p>
 </footer>
 
 </body>
